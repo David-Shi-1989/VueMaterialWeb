@@ -1,0 +1,23 @@
+@import "~vue-material/dist/theme/engine";
+@include md-register-theme("default", (
+  primary: md-get-palette-color(blue, A200)
+));
+@import "~vue-material/dist/theme/all";
+
+@import "./color";
+.md-menu-content {
+  &.md-menu-content-small {
+    .md-list-item {
+      cursor: pointer;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+      .md-list-item-container {
+        font-size: 14px !important;
+        .md-list-item-content {
+          min-height: 32px !important;
+        }
+      }
+    }
+  }
+}
