@@ -1,0 +1,55 @@
+@import "color"; 
+@import "ui-icon.scss";
+@mixin s-full() {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  @include s-full;
+  overflow: hidden;
+}
+#app {
+  @include s-full;
+  overflow: hidden;
+}
+
+// color
+html {
+  @each $key, $val in $color {
+    --color-#{$key}: #{$val};
+  }
+}
+
+.s-full {
+  @include s-full;
+}
+.cannot-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sc-dot {
+  display: inline-block;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  box-shadow: 0 0 2px #ccc;
+  @mixin dot-size($val) {
+    width: $val;
+    height: $val;
+  }
+  &.sc-dot-sm {
+    @include dot-size(8px);
+  }
+  &.sc-dot-default {
+    @include dot-size(12px);
+  }
+}
