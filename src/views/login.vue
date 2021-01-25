@@ -118,7 +118,7 @@ export default {
 <style lang="scss" scoped>
 $cardWidth: 702px;
 .sdnclass-login-wrap {
-  background: url('../assets/image/login-bg.jpg') no-repeat;
+  background: url('../assets/image/login-bg.png') no-repeat;
   background-size: cover;
   & > .card-wrap {
     position: relative;
